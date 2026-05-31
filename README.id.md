@@ -182,19 +182,7 @@ Dari satu run yang selesai (angka Anda bisa sedikit berbeda):
 
 Bentuk data terproses: latih **(190156, 32)**, uji **(47539, 32)**.
 
----
-
-## Keputusan desain
-
-- **Tanpa PCA** pada 32 fitur — interpretabilitas tetap terjaga.  
-- **Target encoding** pada kategorikal (fit hanya di train).  
-- **LinearSVC** bukan SVC RBF karena skala ~190 ribu baris.  
-- **Menghindari kebocoran data** — inti dari kolom yang dibuang.  
-
-`data_learning.ipynb` pernah memiliki bug menyalin `emp_length` ke `annual_inc`; `main.ipynb` memakai `annual_inc.fillna(0)` dengan benar.
-
----
 
 ## Lisensi dan data
 
-Data historis Lending Club dipakai untuk pembelajaran. Periksa ketentuan Lending Club / Kaggle untuk redistribusi. Jangan commit CSV/XLSX besar (lihat `.gitignore`).
+Data historis Lending Club dipakai untuk pembelajaran. Periksa ketentuan Lending Club untuk redistribusi. Jangan commit CSV/XLSX besar (lihat `.gitignore`).
